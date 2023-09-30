@@ -11,8 +11,11 @@ var input_dir
 var direction
 
 func _process(delta):
-	input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	if Input.is_action_just_pressed("attack"):
+		print("Ataca perra")
 
 
 func _physics_process(delta):
