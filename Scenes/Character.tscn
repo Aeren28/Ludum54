@@ -7,8 +7,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhwf5"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-axis_lock_angular_x = true
-axis_lock_angular_z = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.122995)
 script = ExtResource("1_s46cv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
