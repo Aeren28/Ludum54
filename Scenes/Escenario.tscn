@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmutp54iem7by"]
+
+[ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
+[ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
+
+[node name="Escenario" type="Node3D"]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_7kvr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 0, 0.523021)
+
+[node name="Camera3D" parent="." instance=ExtResource("2_lku4h")]
+transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 1.45432, 2.80897)
