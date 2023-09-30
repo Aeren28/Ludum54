@@ -17,7 +17,7 @@ material = SubResource("StandardMaterial3D_1b70l")
 
 [node name="Escenario" type="Node3D"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_7kvr6")]
+[node name="Character" parent="." instance=ExtResource("1_7kvr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 1.92307, 0.523021)
 
 [node name="Camera3D" parent="." instance=ExtResource("2_lku4h")]
