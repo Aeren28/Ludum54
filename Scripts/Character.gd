@@ -23,7 +23,6 @@ func _process(delta):
 	rotate_y(-_mouse_motion.x * ANGULAR_SPEED * delta)
 	
 	if Input.is_action_just_pressed("attack"):
-		print("Ataca perra")
 		var projectile = projectile_preload.instantiate()
 		get_tree().get_root().get_node("Escenario").add_child(projectile)
 		
