@@ -1,22 +1,24 @@
 extends CharacterBody3D
 
+class_name Character
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var input_dir
+var input_rot
 var direction
 
 func _process(delta):
 	input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	input_rot = Input.get_axis()
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if Input.is_action_just_pressed("attack"):
 		print("Ataca perra")
-
+		
 
 func _physics_process(delta):
 	# Add the gravity.
