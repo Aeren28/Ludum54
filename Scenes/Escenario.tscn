@@ -1,12 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmutp54iem7by"]
+[gd_scene load_steps=8 format=3 uid="uid://bmutp54iem7by"]
 
 [ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
+[ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kk1rt"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_nk1mj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1b70l"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8lc72"]
+material = SubResource("StandardMaterial3D_1b70l")
 
 [node name="Escenario" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_7kvr6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 0, 0.523021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 1.92307, 0.523021)
 
 [node name="Camera3D" parent="." instance=ExtResource("2_lku4h")]
-transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 1.45432, 2.80897)
+transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 4.63077, 7.93431)
+
+[node name="Illumination" parent="." instance=ExtResource("3_2dr2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_kk1rt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(19, 0, 0, 0, 19, 0, 0, 0, 19, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_nk1mj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(10.0077, 0, 0, 0, 1, 0, 0, 0, 9.90943, 0, 0, 0)
+mesh = SubResource("PlaneMesh_8lc72")
+skeleton = NodePath("")
