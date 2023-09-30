@@ -1,10 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bmutp54iem7by"]
 
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cbk7uu1hyt2mv" path="res://Scenes/Character.tscn" id="1_7kvr6"]
-=======
 [ext_resource type="PackedScene" uid="uid://b6wmqf8uqfo1u" path="res://Scenes/Character.tscn" id="1_7kvr6"]
->>>>>>> 221cb9466eaf4f771dfb260b6af44a12b0a94b5d
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="5_tv274"]
@@ -42,7 +39,6 @@ mesh = SubResource("PlaneMesh_5fg15")
 transform = Transform3D(2, 0, 0, 0, 0.999, 0, 0, 0, 1.957, 0, 0, 0)
 shape = SubResource("HeightMapShape3D_kpvo8")
 
-<<<<<<< HEAD
 [node name="Spawner" type="Node3D" parent="."]
 script = ExtResource("5_tv274")
 
@@ -72,7 +68,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -13)
 
 [node name="Marker3D8" type="Marker3D" parent="Spawner/SpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -13)
-=======
 [node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86602, 1.73764, 8.89581)
->>>>>>> a8ff41605a90bfcdccd8547e8563ec72b402d9d1
