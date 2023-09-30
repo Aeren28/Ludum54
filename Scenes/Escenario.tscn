@@ -27,9 +27,6 @@ current = true
 [node name="Illumination" parent="." instance=ExtResource("3_2dr2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
 
-[node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.07002, 1.34357, -5.80391)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(35, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_l5lvp")
@@ -40,3 +37,6 @@ mesh = SubResource("PlaneMesh_5fg15")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 0.999, 0, 0, 0, 1.957, 0, 0, 0)
 shape = SubResource("HeightMapShape3D_kpvo8")
+
+[node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86602, 1.73764, 8.89581)
