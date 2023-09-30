@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dya6si10ofcdc"]
+[gd_scene load_steps=5 format=3 uid="uid://c1d4clewfu60u"]
 
-[ext_resource type="Script" path="res://Scenes/Projectile.gd" id="1_l5h33"]
+[ext_resource type="Script" path="res://Scripts/Projectile.gd" id="1_beulm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqqaq"]
 albedo_color = Color(0.737255, 0.321569, 0.298039, 1)
@@ -12,7 +12,7 @@ material = SubResource("StandardMaterial3D_uqqaq")
 
 [node name="RigidBody3D" type="RigidBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-script = ExtResource("1_l5h33")
+script = ExtResource("1_beulm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_hn2gy")

@@ -5,6 +5,8 @@ class_name Character
 const SPEED = 5.0
 const ANGULAR_SPEED = 0.02
 
+var projectile_preload = preload("res://Scenes/Projectile.tscn")
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -22,6 +24,8 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("attack"):
 		print("Ataca perra")
+		var projectile = projectile_preload.instantiate()
+		get_tree().get_root().get_node("Escenario").add_child(projectile)
 		
 
 func _physics_process(delta):

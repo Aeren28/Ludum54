@@ -1,11 +1,8 @@
-extends Node
+extends RigidBody3D
 
+@onready var weapon = get_tree().get_root().get_node("Escenario").get_node("Character").get_node("Weapon").get_node("Marker3D")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	position = weapon.position
+	set_axis_velocity(weapon.transform.forward)
