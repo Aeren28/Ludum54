@@ -18,7 +18,7 @@ func _process(delta):
 	
 	# Mouse movement.
 	_mouse_motion = Input.get_last_mouse_velocity()
-	rotate_y(_mouse_motion.x * ANGULAR_SPEED * delta)
+	rotate_y(-_mouse_motion.x * ANGULAR_SPEED * delta)
 	
 	if Input.is_action_just_pressed("attack"):
 		print("Ataca perra")
