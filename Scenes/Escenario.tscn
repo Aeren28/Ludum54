@@ -5,15 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
 [ext_resource type="PackedScene" uid="uid://dq6v5nb0inck5" path="res://Scenes/Enemy.tscn" id="4_my3s7"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kk1rt"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lvp"]
 
-[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_nk1mj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gfwn"]
+albedo_color = Color(0.188235, 0.0901961, 0.0235294, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1b70l"]
-albedo_color = Color(1, 1, 0, 1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_5fg15"]
+material = SubResource("StandardMaterial3D_1gfwn")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_8lc72"]
-material = SubResource("StandardMaterial3D_1b70l")
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_kpvo8"]
 
 [node name="Escenario" type="Node3D"]
 
@@ -27,17 +27,16 @@ current = true
 [node name="Illumination" parent="." instance=ExtResource("3_2dr2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_kk1rt")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(19, 0, 0, 0, 19, 0, 0, 0, 19, 0, 0, 0)
-shape = SubResource("HeightMapShape3D_nk1mj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(10.0077, 0, 0, 0, 1, 0, 0, 0, 9.90943, 0, 0, 0)
-mesh = SubResource("PlaneMesh_8lc72")
-skeleton = NodePath("")
-
 [node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.07002, 1.34357, -5.80391)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(35, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_l5lvp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_5fg15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 0.999, 0, 0, 0, 1.957, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_kpvo8")
