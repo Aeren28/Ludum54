@@ -15,8 +15,10 @@ func _ready():
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = (player.position - position).normalize
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	print(player.transform)
+	var input_dirX = player.transform.basis.x - transform.basis.x
+	var input_dirZ = player.transform.basis.z - transform.basis.z
+	var direction = (Vector3(input_dirX.x, 0, input_dirZ.z)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmutp54iem7by"]
+[gd_scene load_steps=9 format=3 uid="uid://bmutp54iem7by"]
 
 [ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
+[ext_resource type="PackedScene" uid="uid://dq6v5nb0inck5" path="res://Scenes/Enemy.tscn" id="4_my3s7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kk1rt"]
 
@@ -37,3 +38,6 @@ shape = SubResource("HeightMapShape3D_nk1mj")
 transform = Transform3D(10.0077, 0, 0, 0, 1, 0, 0, 0, 9.90943, 0, 0, 0)
 mesh = SubResource("PlaneMesh_8lc72")
 skeleton = NodePath("")
+
+[node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.07002, 1.34357, -5.80391)
