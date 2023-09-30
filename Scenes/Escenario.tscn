@@ -38,6 +38,7 @@ mesh = SubResource("PlaneMesh_5fg15")
 transform = Transform3D(2, 0, 0, 0, 0.999, 0, 0, 0, 1.957, 0, 0, 0)
 shape = SubResource("HeightMapShape3D_kpvo8")
 
+<<<<<<< HEAD
 [node name="Spawner" type="Node3D" parent="."]
 script = ExtResource("5_tv274")
 
@@ -67,3 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -13)
 
 [node name="Marker3D8" type="Marker3D" parent="Spawner/SpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -13)
+=======
+[node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86602, 1.73764, 8.89581)
+>>>>>>> a8ff41605a90bfcdccd8547e8563ec72b402d9d1
