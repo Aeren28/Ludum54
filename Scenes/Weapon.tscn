@@ -6,7 +6,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ocasn"]
 
-[node name="StaticBody3D" type="StaticBody3D"]
+[node name="Weapon" type="StaticBody3D"]
 transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_colk5")
 
@@ -15,3 +15,6 @@ mesh = SubResource("CylinderMesh_y1goe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_ocasn")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.948951, 0.547473)
