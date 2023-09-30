@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4lbeayrcc46"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_qo3fx"]
+transparency = 1
+blend_mode = 1
+emission_enabled = true
+emission = Color(0.972549, 0.470588, 0.0431373, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ygr5b"]
+material = SubResource("ORMMaterial3D_qo3fx")
+radius = 0.2
+
+[sub_resource type="TorusMesh" id="TorusMesh_hgtic"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g7bif"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.396078, 0.803922, 0.317647, 1)
+emission_enabled = true
+emission = Color(0.396078, 0.803922, 0.317647, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_cf88w"]
+material = SubResource("ORMMaterial3D_g7bif")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_jc7a6"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0, 1, 0.996078, 1)
+emission_enabled = true
+emission = Color(0, 1, 0.996078, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_uqw2w"]
+material = SubResource("ORMMaterial3D_jc7a6")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_dbwx2"]
+emission_enabled = true
+emission = Color(0, 0.980392, 0.980392, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_g1v7l"]
+material = SubResource("ORMMaterial3D_dbwx2")
+
+[node name="Particles" type="Node3D"]
+
+[node name="CandleParticles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0099287, -2.38419e-07, 0.0030551)
+visible = false
+amount = 10
+speed_scale = 0.5
+local_coords = true
+draw_order = 1
+mesh = SubResource("SphereMesh_ygr5b")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 0.25
+emission_ring_inner_radius = 0.0
+gravity = Vector3(0, 3, 0)
+scale_amount_min = 0.0
+scale_amount_max = 0.1
+
+[node name="WitchDeathParticles" type="CPUParticles3D" parent="."]
+visible = false
+amount = 10
+local_coords = true
+draw_order = 1
+mesh = SubResource("TorusMesh_hgtic")
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 5, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+color = Color(0.466667, 0.00392157, 0.741176, 1)
+
+[node name="CauldronParticles" type="CPUParticles3D" parent="."]
+visible = false
+amount = 10
+mesh = SubResource("SphereMesh_cf88w")
+emission_shape = 1
+emission_sphere_radius = 2.0
+gravity = Vector3(0, 1, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.5
+
+[node name="ProjectileKnightParticles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0043323, 0.00865555, -0.00345969)
+visible = false
+amount = 20
+mesh = SubResource("SphereMesh_uqw2w")
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0, 0)
+scale_amount_min = 0.25
+scale_amount_max = 0.25
+
+[node name="ProjectileTileKnightParticles" type="CPUParticles3D" parent="ProjectileKnightParticles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+amount = 10
+draw_order = 1
+mesh = SubResource("SphereMesh_g1v7l")
+gravity = Vector3(10, 0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.25
