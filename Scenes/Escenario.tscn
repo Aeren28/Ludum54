@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
-[ext_resource type="PackedScene" uid="uid://dq6v5nb0inck5" path="res://Scenes/Enemy.tscn" id="4_my3s7"]
+[ext_resource type="Script" path="res://Scripts/Spawner.gd" id="5_tv274"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lvp"]
 
@@ -21,17 +21,14 @@ material = SubResource("StandardMaterial3D_1gfwn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 1.92307, 0.523021)
 
 [node name="Camera3D" parent="." instance=ExtResource("2_lku4h")]
-transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 9.75386, 13.7239)
+transform = Transform3D(1, 0, 0, 0, 0.923759, 0.382974, 0, -0.382974, 0.923759, 0.0373392, 12.4993, 22.0066)
 current = true
 
 [node name="Illumination" parent="." instance=ExtResource("3_2dr2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
 
-[node name="Enemy" parent="." instance=ExtResource("4_my3s7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.07002, 1.34357, -5.80391)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(35, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_l5lvp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
@@ -40,3 +37,33 @@ mesh = SubResource("PlaneMesh_5fg15")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 0.999, 0, 0, 0, 1.957, 0, 0, 0)
 shape = SubResource("HeightMapShape3D_kpvo8")
+
+[node name="Spawner" type="Node3D" parent="."]
+script = ExtResource("5_tv274")
+
+[node name="SpawnPoints" type="Node3D" parent="Spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Marker3D" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -13)
+
+[node name="Marker3D2" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 13)
+
+[node name="Marker3D4" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 13)
+
+[node name="Marker3D5" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, 13)
+
+[node name="Marker3D6" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
+
+[node name="Marker3D7" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -13)
+
+[node name="Marker3D8" type="Marker3D" parent="Spawner/SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -13)

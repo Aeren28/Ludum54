@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://hi334nko4m7p"]
+[gd_scene load_steps=4 format=3 uid="uid://hi334nko4m7p"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_nbmms"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6f6et"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0vdmg"]
 
 [node name="Enemy" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -10,3 +12,6 @@ script = ExtResource("1_nbmms")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_6f6et")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_0vdmg")
