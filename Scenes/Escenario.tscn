@@ -20,7 +20,7 @@ material = SubResource("StandardMaterial3D_1b70l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165977, 1.92307, 0.523021)
 
 [node name="Camera3D" parent="." instance=ExtResource("2_lku4h")]
-transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 4.63077, 7.93431)
+transform = Transform3D(1, 0, 0, 0, 0.810011, 0.586415, 0, -0.586415, 0.810011, 0.0373392, 9.75386, 13.7239)
 
 [node name="Illumination" parent="." instance=ExtResource("3_2dr2s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
