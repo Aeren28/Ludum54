@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctvu4emofqvfv"]
+
+[ext_resource type="Script" path="res://Scenes/Menu.gd" id="1_je3dh"]
+[ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Doctor Glitch.otf" id="2_ai7ms"]
+
+[sub_resource type="FontVariation" id="FontVariation_f34gg"]
+base_font = ExtResource("2_ai7ms")
+
+[sub_resource type="FontVariation" id="FontVariation_akbtr"]
+base_font = ExtResource("2_ai7ms")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jigqi"]
+bg_color = Color(0, 0, 0, 0.529412)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ad32"]
+bg_color = Color(0, 0, 0, 0.72549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cy2uv"]
+bg_color = Color(0, 0, 0, 0.921569)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_je3dh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("FontVariation_f34gg")
+theme_override_font_sizes/font_size = 201
+text = "UNKNOWN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = -40
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Start Button Container" type="MarginContainer" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_right = 400
+
+[node name="Start Button" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Start Button Container"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Quit Button Container/Quit Button")
+focus_neighbor_bottom = NodePath("../../Credits Button Container/Credits Button")
+theme_override_fonts/font = SubResource("FontVariation_akbtr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_jigqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4ad32")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cy2uv")
+text = "Start"
+
+[node name="Credits Button Container" type="MarginContainer" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_right = 400
+
+[node name="Credits Button" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Credits Button Container"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Start Button Container/Start Button")
+focus_neighbor_bottom = NodePath("../../Quit Button Container/Quit Button")
+theme_override_fonts/font = SubResource("FontVariation_akbtr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_jigqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4ad32")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cy2uv")
+text = "Credits"
+
+[node name="Quit Button Container" type="MarginContainer" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_right = 400
+
+[node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Quit Button Container"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Credits Button Container/Credits Button")
+focus_neighbor_bottom = NodePath("../../Start Button Container/Start Button")
+theme_override_fonts/font = SubResource("FontVariation_akbtr")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_jigqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4ad32")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cy2uv")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Start Button Container/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Credits Button Container/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Quit Button Container/Quit Button" to="." method="_on_quit_button_pressed"]
