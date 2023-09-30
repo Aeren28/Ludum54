@@ -25,6 +25,3 @@ func _physics_process(delta):
 	if collision:
 		if (collision.get_collider(0).name == "Enemy"):
 			queue_free()
-
-
-
