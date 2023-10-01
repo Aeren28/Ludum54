@@ -9,8 +9,8 @@ func _process(delta):
 	pass
 
 func _on_start_button_pressed():
-	$AudioStart.play()
 	get_tree().change_scene_to_file("res://Scenes/Escenario.tscn")
+	$AudioStart.play()
 
 func _on_credits_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
