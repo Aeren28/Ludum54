@@ -10,7 +10,7 @@ material = SubResource("StandardMaterial3D_uqqaq")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k0ysn"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="RigidBody3D" type="RigidBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 script = ExtResource("1_beulm")
 
@@ -19,3 +19,5 @@ mesh = SubResource("SphereMesh_hn2gy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_k0ysn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
