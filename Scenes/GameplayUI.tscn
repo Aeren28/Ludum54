@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://qgiybjcqq3a8"]
+[gd_scene load_steps=3 format=3 uid="uid://qgiybjcqq3a8"]
 
+[ext_resource type="Script" path="res://Scenes/GameplayUI.gd" id="1_0gq7y"]
 [ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Assets/Fonts/Doctor Glitch.otf" id="2_sfvnh"]
 
 [node name="GameplayUI" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0gq7y")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -33,7 +35,7 @@ offset_top = 37.0
 offset_right = 1091.0
 offset_bottom = 154.0
 
-[node name="Label" type="Label" parent="MarginContainer2"]
+[node name="Score" type="Label" parent="MarginContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_sfvnh")
 theme_override_font_sizes/font_size = 80
