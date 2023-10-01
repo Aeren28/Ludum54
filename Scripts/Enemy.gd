@@ -36,7 +36,9 @@ func damage():
 	if health <= 0:
 		target.get_points(SCORE)
 		$AudioStreamPlayer.play()
-		var instance = fruit.instantiate()
-		instance.position = position
-		get_tree().get_root().get_node("Escenario").add_child(instance)
+		if (randf_range(1,100) <= 25):
+			var instance = fruit.instantiate()
+			instance.position = position
+			get_tree().get_root().get_node("Escenario").add_child(instance)
+			
 		queue_free()
