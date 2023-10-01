@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmy0vbgobmas3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rhr07"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh4x0"]
+
+[node name="Fruit" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_rhr07")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_qh4x0")
