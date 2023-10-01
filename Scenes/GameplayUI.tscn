@@ -1,7 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://qgiybjcqq3a8"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Scripts/GameplayUI.gd" id="1_0gq7y"]
 [ext_resource type="Texture2D" uid="uid://cecvvfwi1ebmc" path="res://Assets/Textures/bar.png" id="2_elkip"]
+=======
+[ext_resource type="Script" path="res://Scripts/GameplayUI.gd" id="1_s4ome"]
+[ext_resource type="Texture2D" uid="uid://cecvvfwi1ebmc" path="res://Assets/Textures/Bar.png" id="2_elkip"]
+>>>>>>> origin/main
 [ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Assets/Fonts/Doctor Glitch.otf" id="2_sfvnh"]
 [ext_resource type="Texture2D" uid="uid://dj53yrnewx73m" path="res://Assets/Textures/Bar Fill.png" id="4_pb1fp"]
 
@@ -12,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0gq7y")
+script = ExtResource("1_s4ome")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
