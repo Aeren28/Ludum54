@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2604gor2ta2v"]
+[gd_scene load_steps=10 format=3 uid="uid://b2604gor2ta2v"]
 
+[ext_resource type="Script" path="res://Scenes/Fruits/Banana.gd" id="1_pgg2e"]
 [ext_resource type="ArrayMesh" uid="uid://dgtyjfmfdyqd0" path="res://Assets/Models/Fruits New/Banana.obj" id="1_q3u45"]
 [ext_resource type="Texture2D" uid="uid://cs56yeidd5vth" path="res://Assets/Textures/platano/DefaultMaterial_Base_color.png" id="2_cae7r"]
 [ext_resource type="Material" uid="uid://t586gjl74v7n" path="res://Scenes/Fruits/Banana.tres" id="2_ty2u2"]
@@ -20,18 +21,21 @@ metallic_texture = ExtResource("3_svhxm")
 normal_enabled = true
 normal_texture = ExtResource("4_6yd7x")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_uysai"]
-size = Vector3(13.1065, 6.60662, 7.34638)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2plug"]
+radius = 0.596829
+height = 2.60531
 
 [node name="RigidBody3D" type="RigidBody3D"]
+collision_layer = 128
+script = ExtResource("1_pgg2e")
 
 [node name="Banana" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = ExtResource("1_q3u45")
 surface_material_override/0 = ExtResource("2_ty2u2")
 surface_material_override/1 = SubResource("StandardMaterial3D_yc12p")
 surface_material_override/2 = SubResource("StandardMaterial3D_givp3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738709, 1.80001, -1.09836)
-shape = SubResource("BoxShape3D_uysai")
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.162701, 0.329808, -0.11291)
+shape = SubResource("CapsuleShape3D_2plug")

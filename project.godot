@@ -122,3 +122,7 @@ look_left={
 [internationalization]
 
 rendering/stretch/scale=1.83
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

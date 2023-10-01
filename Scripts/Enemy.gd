@@ -10,7 +10,7 @@ var DAMAGE = randi_range(1, 2)
 var health = MAX_HEALTH
 
 @onready var target = null
-@onready var fruit = preload("res://Scenes/Fruit.tscn")
+@onready var fruits = [preload("res://Scenes/Fruits/Apple.tscn"), preload("res://Scenes/Fruits/Banana.tscn"), preload("res://Scenes/Fruits/Cherry.tscn"), preload("res://Scenes/Fruits/Watermelon.tscn")]
 @onready var attack_cooldown = $"Attack Cooldown"
 
 func _ready():
@@ -37,7 +37,7 @@ func damage():
 		target.get_points(SCORE)
 		$AudioStreamPlayer.play()
 		if (randf_range(1,100) <= 25):
-			var instance = fruit.instantiate()
+			var instance = fruits[randi_range(0, fruits.size() - 1)].instantiate()
 			instance.position = position
 			get_tree().get_root().get_node("Escenario").add_child(instance)
 			

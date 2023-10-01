@@ -1,18 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cat5wi5vecwmc"]
+[gd_scene load_steps=5 format=3 uid="uid://cat5wi5vecwmc"]
 
+[ext_resource type="Script" path="res://Scenes/Fruits/Cherry.gd" id="1_ihti7"]
 [ext_resource type="ArrayMesh" uid="uid://dj1hgh7t8xeqf" path="res://Assets/Models/Fruits New/cherry.obj" id="1_wfev2"]
 [ext_resource type="Material" uid="uid://buocbjejygito" path="res://Scenes/Fruits/Cherry.tres" id="2_8a3cr"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5qca6"]
-size = Vector3(7.1886, 9.40874, 3.00968)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_psxl7"]
+radius = 0.677914
+height = 1.72812
 
 [node name="RigidBody3D" type="RigidBody3D"]
+collision_layer = 128
+script = ExtResource("1_ihti7")
 
 [node name="Cherry" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, 0)
 mesh = ExtResource("1_wfev2")
 surface_material_override/0 = ExtResource("2_8a3cr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72764, 4.61608, 0.143077)
-shape = SubResource("BoxShape3D_5qca6")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.350442, 0.818484, 0.143077)
+shape = SubResource("CapsuleShape3D_psxl7")

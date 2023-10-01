@@ -3,5 +3,7 @@
 [node name="Illumination" type="Node3D"]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-light_energy = 16.0
+light_color = Color(1, 1, 0.796078, 1)
+light_energy = 10.87
+light_indirect_energy = 7.445
 omni_range = 24.6865
