@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmutp54iem7by"]
+[gd_scene load_steps=10 format=3 uid="uid://bmutp54iem7by"]
 
 [ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
+[ext_resource type="AudioStream" uid="uid://ceyb7mqehpey1" path="res://Assets/Audios/musica/Combate1.wav" id="5_mhex1"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="5_tv274"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lvp"]
@@ -67,3 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -13)
 
 [node name="Marker3D8" type="Marker3D" parent="Spawner/SpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -13)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mhex1")
+autoplay = true
