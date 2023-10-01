@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://lm4h5b8of8ne"]
+[gd_scene load_steps=7 format=3 uid="uid://lm4h5b8of8ne"]
 
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="1_s46cv"]
+[ext_resource type="ArrayMesh" uid="uid://1juqlpx3x2sl" path="res://Knight.obj" id="2_0rdrf"]
 [ext_resource type="PackedScene" uid="uid://coe4kerya7xdn" path="res://Scenes/Weapon.tscn" id="2_1nvvq"]
 [ext_resource type="PackedScene" uid="uid://qgiybjcqq3a8" path="res://Scenes/GameplayUI.tscn" id="3_bfkn5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_i2upd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhwf5"]
+height = 3.50702
 
 [node name="Character" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.122995)
@@ -15,12 +17,19 @@ collision_mask = 3
 script = ExtResource("1_s46cv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_i2upd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.751534, 0)
 shape = SubResource("CapsuleShape3D_xhwf5")
 
+[node name="Knight" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, -0.821995, -0.344371)
+layers = 3
+mesh = ExtResource("2_0rdrf")
+
 [node name="Weapon" parent="." instance=ExtResource("2_1nvvq")]
-transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0, 0, 0.622068)
+transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0.00120521, -0.0050348, 0.621483)
 
 [node name="GameplayUI" parent="." instance=ExtResource("3_bfkn5")]
