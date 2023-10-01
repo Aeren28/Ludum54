@@ -150,6 +150,7 @@ func damage(damage):
 	var percentage = float(health) / MAX_HEALTH
 	gameplayUI_script.setHealthbar(percentage * 100)
 	if (health <= 0):
+		get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
 		queue_free()
 
 func get_points(append_score):
