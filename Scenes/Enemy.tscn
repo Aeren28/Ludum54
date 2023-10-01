@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq6v5nb0inck5"]
+[gd_scene load_steps=5 format=3 uid="uid://dq6v5nb0inck5"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_nbmms"]
-[ext_resource type="PackedScene" uid="uid://cjjqlic55jnwr" path="res://Assets/Models/Characters/bruja.glb" id="2_anj3r"]
+[ext_resource type="AudioStream" uid="uid://bljv0axevbhka" path="res://Assets/Audios/enemigos/Dead_1.wav" id="2_qt2jn"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6f6et"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_teu4i"]
 
@@ -9,15 +11,15 @@
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)
 script = ExtResource("1_nbmms")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_6f6et")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.16855, 0, 0, 0, 1, 0, 0.404353, 0)
 shape = SubResource("CapsuleShape3D_teu4i")
 
 [node name="Attack Cooldown" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
-[node name="bruja" parent="." instance=ExtResource("2_anj3r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0819871, 0, 0.588153)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="bruja"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qt2jn")

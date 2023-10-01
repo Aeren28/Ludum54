@@ -35,3 +35,5 @@ func damage():
 	if health <= 0:
 		target.get_points(SCORE)
 		queue_free()
+		$AudioStreamPlayer.play()
+		

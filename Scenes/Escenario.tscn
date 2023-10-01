@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmutp54iem7by"]
+[gd_scene load_steps=12 format=3 uid="uid://bmutp54iem7by"]
 
 [ext_resource type="PackedScene" uid="uid://lm4h5b8of8ne" path="res://Scenes/Character.tscn" id="1_7kvr6"]
 [ext_resource type="PackedScene" uid="uid://cstxtwrk04ijm" path="res://Scenes/Camera.tscn" id="2_lku4h"]
 [ext_resource type="PackedScene" uid="uid://cytgbwr0yyvtf" path="res://Scenes/Illumination.tscn" id="3_2dr2s"]
 [ext_resource type="AudioStream" uid="uid://ceyb7mqehpey1" path="res://Assets/Audios/musica/Combate1.wav" id="5_mhex1"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="5_tv274"]
+[ext_resource type="AudioStream" uid="uid://bg0632kix658g" path="res://Assets/Audios/entorno/Ambient.wav" id="6_tulfl"]
+[ext_resource type="AudioStream" uid="uid://254tq5s6fhk6" path="res://Assets/Audios/enemigos/Attack_3.wav" id="7_5urjp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lvp"]
 
@@ -72,3 +74,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -13)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_mhex1")
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tulfl")
+volume_db = -2.0
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5urjp")
