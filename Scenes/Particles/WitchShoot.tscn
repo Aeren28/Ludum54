@@ -36,6 +36,7 @@ scale_amount_max = 0.5
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="CPUParticles3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+visible = false
 amount = 15
 speed_scale = 0.8
 mesh = SubResource("SphereMesh_p2431")
