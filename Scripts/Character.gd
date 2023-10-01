@@ -147,8 +147,7 @@ func get_projected_2d_basis():
 
 func damage(damage):
 	health -= damage
-	var percentage = float(health) / MAX_HEALTH
-	gameplayUI_script.setHealthbar(percentage * 100)
+	gameplayUI_script.setHealthbar(health / MAX_HEALTH)
 	if (health <= 0):
 		queue_free()
 

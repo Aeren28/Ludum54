@@ -5,7 +5,7 @@ friction = 0.65
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_y1goe"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_wxbrl"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ocasn"]
 
 [node name="Weapon" type="StaticBody3D"]
 transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0, 0, 0)
@@ -14,9 +14,8 @@ physics_material_override = SubResource("PhysicsMaterial_colk5")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CylinderMesh_y1goe")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_ocasn")
+
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0765443, 0.827369, 1.08407)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_wxbrl")
-disabled = true

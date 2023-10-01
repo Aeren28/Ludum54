@@ -7,6 +7,7 @@
 [sub_resource type="SphereMesh" id="SphereMesh_qh4x0"]
 
 [node name="Fruit" type="RigidBody3D"]
+contact_monitor = true
 script = ExtResource("1_dysgn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
