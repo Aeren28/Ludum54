@@ -15,6 +15,8 @@ var health = MAX_HEALTH
 
 func _ready():
 	target = get_tree().get_root().get_node("Escenario").get_node("Character")
+
+func _process(delta):
 	if target != null:
 		if position.distance_to(target.position) < 1.5:
 			if attack_cooldown.is_stopped():
@@ -38,4 +40,3 @@ func damage():
 		instance.position = position
 		get_tree().get_root().get_node("Escenario").add_child(instance)
 		queue_free()
-		
