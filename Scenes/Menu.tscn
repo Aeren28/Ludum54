@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctvu4emofqvfv"]
+[gd_scene load_steps=9 format=3 uid="uid://ctvu4emofqvfv"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gh8hl"]
 [ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Assets/Fonts/Doctor Glitch.otf" id="2_ai7ms"]
+[ext_resource type="AudioStream" uid="uid://dj0fcoxf2vo1t" path="res://Assets/Audios/musica/Menu_1.wav" id="3_og2i2"]
 
 [sub_resource type="FontVariation" id="FontVariation_f34gg"]
 base_font = ExtResource("2_ai7ms")
@@ -120,6 +121,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jigqi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4ad32")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cy2uv")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_og2i2")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Start Button Container/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Credits Button Container/Credits Button" to="." method="_on_credits_button_pressed"]
