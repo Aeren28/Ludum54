@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://brf3gdippqjum"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sllmy"]
+transparency = 1
+albedo_color = Color(1, 0.54902, 0.984314, 1)
+emission_enabled = true
+emission = Color(1, 0, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_usmqp"]
+material = SubResource("StandardMaterial3D_sllmy")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7plf0"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 0.682353, 0.984314, 1)
+emission_enabled = true
+emission = Color(1, 0, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_p2431"]
+material = SubResource("StandardMaterial3D_7plf0")
+radius = 0.25
+height = 0.5
+
+[node name="WitchShoot" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+amount = 50
+mesh = SubResource("SphereMesh_usmqp")
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.5
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="CPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+amount = 15
+speed_scale = 0.8
+mesh = SubResource("SphereMesh_p2431")
+gravity = Vector3(10, 0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.5
