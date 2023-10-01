@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cow3k5ems2h2r"]
+[gd_scene load_steps=13 format=3 uid="uid://cow3k5ems2h2r"]
 
 [ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_s3mbv"]
 [ext_resource type="FontFile" uid="uid://cls1ja4qb8670" path="res://Assets/Fonts/papyrus.ttf" id="2_omqi3"]
+[ext_resource type="AudioStream" uid="uid://dnvfbdwb7lqqg" path="res://Assets/Audios/musica/Creditos.wav" id="3_b73vm"]
 
 [sub_resource type="FontFile" id="FontFile_bhwus"]
 cache/0/16/0/ascent = 0.0
@@ -289,5 +290,10 @@ text = "Back"
 libraries = {
 "": SubResource("AnimationLibrary_m6453")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_b73vm")
+volume_db = -6.0
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/Back Button" to="." method="_on_back_button_pressed"]
