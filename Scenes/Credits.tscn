@@ -132,6 +132,19 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Animation" id="Animation_0psh8"]
 resource_name = "Credits"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m6453"]
 _data = {
@@ -148,13 +161,16 @@ grow_vertical = 2
 script = ExtResource("1_s3mbv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.133333, 0.133333, 0.133333, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 1084.0
 offset_right = 1920.0
-offset_bottom = 1799.0
+offset_bottom = 2883.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
