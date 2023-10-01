@@ -16,7 +16,6 @@ mesh = SubResource("CylinderMesh_y1goe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_ocasn")
-disabled = true
 
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0765443, 0.827369, 1.08407)
