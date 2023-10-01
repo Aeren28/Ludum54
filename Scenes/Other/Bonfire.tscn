@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c77lcw3fs84k3"]
+
+[ext_resource type="ArrayMesh" uid="uid://cylebfdxe3q62" path="res://Assets/Models/Other/Bonfire.obj" id="1_7omno"]
+[ext_resource type="Material" uid="uid://cxq2jefijx6ms" path="res://Scenes/Bonfire.tres" id="2_npo2o"]
+
+[node name="Bonfire" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.81723)
+mesh = ExtResource("1_7omno")
+surface_material_override/0 = ExtResource("2_npo2o")

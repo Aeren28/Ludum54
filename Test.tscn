@@ -1,13 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://m4p6n1umtm7k"]
+[gd_scene load_steps=18 format=3 uid="uid://m4p6n1umtm7k"]
 
 [ext_resource type="ArrayMesh" uid="uid://6d7tvx3rpctm" path="res://witch.obj" id="1_jpp1q"]
 [ext_resource type="Texture2D" uid="uid://bihv1r6i54jv0" path="res://Assets/Textures/botella 4/DefaultMaterial_Base_color.png" id="2_efsxv"]
 [ext_resource type="PackedScene" uid="uid://0eqn58n82eur" path="res://Assets/Models/Characters/caballero.glb" id="3_0mahw"]
 [ext_resource type="ArrayMesh" uid="uid://1juqlpx3x2sl" path="res://Knight.obj" id="4_p0m7k"]
-[ext_resource type="Texture2D" uid="uid://d4f81e08q7bi5" path="res://Assets/Textures/caballero/DefaultMaterial_Base_color.png" id="5_qdl61"]
-[ext_resource type="Texture2D" uid="uid://c2v56leflphy1" path="res://Assets/Textures/caballero/DefaultMaterial_Metallic.png" id="6_ydaer"]
-[ext_resource type="Texture2D" uid="uid://cxx5gh4kbk20d" path="res://Assets/Textures/caballero/DefaultMaterial_Normal_OpenGL.png" id="7_04ea4"]
+[ext_resource type="Material" uid="uid://c7qfcwvlojfk2" path="res://Scenes/Knight.tres" id="5_iv5g3"]
 [ext_resource type="ArrayMesh" uid="uid://dvtqtqcluiktp" path="res://Assets/Models/Fruits New/WaterMelon.obj" id="8_43s4b"]
+[ext_resource type="PackedScene" uid="uid://c77lcw3fs84k3" path="res://Scenes/Other/Bonfire.tscn" id="10_1ksj7"]
+[ext_resource type="PackedScene" uid="uid://cekfwnhaaghlb" path="res://Scenes/Other/Caldero.tscn" id="11_ku4ci"]
 [ext_resource type="ArrayMesh" uid="uid://cfrssvu261w7c" path="res://Assets/Models/Fruits New/Apple.obj" id="12_dqsrg"]
 [ext_resource type="ArrayMesh" uid="uid://dj1hgh7t8xeqf" path="res://Assets/Models/Fruits New/cherry.obj" id="17_ofi4a"]
 [ext_resource type="ArrayMesh" uid="uid://dgtyjfmfdyqd0" path="res://Assets/Models/Fruits New/Banana.obj" id="21_cqfpp"]
@@ -25,13 +25,6 @@ normal_enabled = true
 albedo_texture = ExtResource("2_efsxv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yja46"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xy5wm"]
-albedo_texture = ExtResource("5_qdl61")
-metallic = 1.0
-metallic_texture = ExtResource("6_ydaer")
-normal_enabled = true
-normal_texture = ExtResource("7_04ea4")
 
 [node name="Test" type="Node3D"]
 
@@ -53,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0412, 21.3328, -23.5573)
 [node name="Knight" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.4599, 0, -15.2291)
 mesh = ExtResource("4_p0m7k")
-surface_material_override/0 = SubResource("StandardMaterial3D_xy5wm")
+surface_material_override/0 = ExtResource("5_iv5g3")
 
 [node name="WaterMelon" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 52.1194, 54.0263, 63.4682)
@@ -70,3 +63,8 @@ mesh = ExtResource("17_ofi4a")
 [node name="Banana" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0391267, 0, -0.508497, 0, 0.51, 0, 0.508497, 0, -0.0391267, 42.9573, 29.1125, 38.6065)
 mesh = ExtResource("21_cqfpp")
+
+[node name="Bonfire" parent="." instance=ExtResource("10_1ksj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133648, -0.293388, 3.83749)
+
+[node name="Caldero" parent="." instance=ExtResource("11_ku4ci")]
