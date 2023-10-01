@@ -33,7 +33,7 @@ func damage():
 	health -= 1
 	if health <= 0:
 		target.get_points(SCORE)
-		#$AudioStreamPlayer.play()
+		$AudioStreamPlayer.play()
 		var instance = fruit.instantiate()
 		instance.position = position
 		get_tree().get_root().get_node("Escenario").add_child(instance)
