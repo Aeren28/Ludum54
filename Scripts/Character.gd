@@ -21,6 +21,8 @@ var use_mouse_and_keyboard = true
 var health = MAX_HEALTH
 var score = 0;
 
+@onready var gameplayUI_script = get_node("GameplayUI")
+
 func _input(event):
 	if(event is InputEventKey):
 		use_mouse_and_keyboard = true;
@@ -145,9 +147,10 @@ func get_projected_2d_basis():
 
 func damage(damage):
 	health -= damage
-	print(health)
+	gameplayUI_script.setHealthbar(health / MAX_HEALTH)
 	if (health <= 0):
 		queue_free()
 
 func get_points(append_score):
 	score += append_score
+	gameplayUI_script.setScore(score)
