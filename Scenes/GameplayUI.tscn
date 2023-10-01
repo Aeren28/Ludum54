@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://qgiybjcqq3a8"]
+[gd_scene load_steps=6 format=3 uid="uid://qgiybjcqq3a8"]
 
 [ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Assets/Fonts/Doctor Glitch.otf" id="2_sfvnh"]
+
+[sub_resource type="Gradient" id="Gradient_6e8d3"]
+colors = PackedColorArray(0.372549, 0.341176, 0.341176, 1, 0.372549, 0.341176, 0.341176, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kgceb"]
+gradient = SubResource("Gradient_6e8d3")
+width = 620
+height = 120
+
+[sub_resource type="Gradient" id="Gradient_upsf2"]
+colors = PackedColorArray(0.431373, 0, 0, 1, 0.431373, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_la413"]
+gradient = SubResource("Gradient_upsf2")
+width = 620
+height = 120
 
 [node name="GameplayUI" type="Control"]
 layout_mode = 3
@@ -25,6 +41,9 @@ offset_bottom = 148.0
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
 layout_mode = 2
+value = 80.0
+texture_under = SubResource("GradientTexture2D_kgceb")
+texture_progress = SubResource("GradientTexture2D_la413")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
