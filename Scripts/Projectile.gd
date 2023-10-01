@@ -13,6 +13,7 @@ func _ready():
 	weapon = get_tree().get_root().get_node("Escenario").get_node("Character").get_node("Weapon").get_node("Marker3D")
 	position = weapon.global_transform.origin
 	velocity = weapon.get_global_transform().basis.z * SPEED
+	get_tree().get_root().get_node("Escenario").get_node("AudioStreamPlayer3").play()
 
 func _process(delta):
 	life_timer += delta

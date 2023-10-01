@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cow3k5ems2h2r"]
+[gd_scene load_steps=14 format=3 uid="uid://cow3k5ems2h2r"]
 
 [ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_s3mbv"]
 [ext_resource type="FontFile" uid="uid://cls1ja4qb8670" path="res://Assets/Fonts/papyrus.ttf" id="2_omqi3"]
 [ext_resource type="AudioStream" uid="uid://dnvfbdwb7lqqg" path="res://Assets/Audios/musica/Creditos.wav" id="3_b73vm"]
+[ext_resource type="Texture2D" uid="uid://cvasqw8f74fjo" path="res://Assets/Draw/Ilustración-sin-título.png" id="3_hkmf5"]
 
 [sub_resource type="FontFile" id="FontFile_bhwus"]
 cache/0/16/0/ascent = 0.0
@@ -165,13 +166,12 @@ script = ExtResource("1_s3mbv")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.133333, 0.133333, 0.133333, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_top = 1084.0
 offset_right = 1920.0
-offset_bottom = 2883.0
+offset_bottom = 1799.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
@@ -285,6 +285,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xg4cf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rs15e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fi0e2")
 text = "Back"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_hkmf5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
