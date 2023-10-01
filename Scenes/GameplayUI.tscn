@@ -1,24 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://qgiybjcqq3a8"]
+[gd_scene load_steps=5 format=3 uid="uid://qgiybjcqq3a8"]
 
-[ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Assets/Fonts/Doctor Glitch.otf" id="2_sfvnh"]
+[ext_resource type="FontFile" uid="uid://cls1ja4qb8670" path="res://Assets/Fonts/papyrus.ttf" id="1_dc554"]
+[ext_resource type="Texture2D" uid="uid://cecvvfwi1ebmc" path="res://Assets/Textures/Bar.png" id="2_un1u8"]
+[ext_resource type="Texture2D" uid="uid://dj53yrnewx73m" path="res://Assets/Textures/Bar Fill.png" id="3_dd5v7"]
 
 [sub_resource type="GDScript" id="GDScript_88mv7"]
 script/source = "extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MarginContainer2/Score.text = \"0\"
-
+	$MarginContainer/Score.text = \"0\"
+	$MarginContainer2/Healthbar.value = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func setScore(score):
-	$MarginContainer2/Score.set_text(str(score))
+	$MarginContainer/Score.set_text(str(score))
 
 func setHealthbar(percentage):
-	pass
+	$MarginContainer2/Healthbar.value = percentage - 11
 "
 
 [node name="GameplayUI" type="Control"]
@@ -30,33 +32,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_88mv7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(1, 1, 1, 0)
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 31.0
-offset_right = 651.0
-offset_bottom = 148.0
+offset_right = 350.0
+offset_bottom = 138.0
+theme_override_constants/margin_left = 25
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
+[node name="Score" type="Label" parent="MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_dc554")
+theme_override_font_sizes/font_size = 85
+text = "1000"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 2
-offset_left = 844.0
-offset_top = 37.0
-offset_right = 1091.0
-offset_bottom = 154.0
+layout_mode = 0
+offset_left = 1200.0
+offset_right = 1920.0
+offset_bottom = 120.0
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
 
-[node name="Score" type="Label" parent="MarginContainer2"]
+[node name="Healthbar" type="TextureProgressBar" parent="MarginContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_sfvnh")
-theme_override_font_sizes/font_size = 80
-text = "1000"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = -17.0
+value = -11.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_un1u8")
+texture_progress = ExtResource("3_dd5v7")
+texture_progress_offset = Vector2(10, 0)
