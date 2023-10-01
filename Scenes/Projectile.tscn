@@ -12,6 +12,7 @@ material = SubResource("StandardMaterial3D_uqqaq")
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+motion_mode = 1
 script = ExtResource("1_beulm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
