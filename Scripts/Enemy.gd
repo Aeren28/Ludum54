@@ -3,6 +3,7 @@ extends CharacterBody3D
 class_name Enemy
 
 const MAX_HEALTH = 2
+const SCORE = 15
 
 var SPEED = randf_range(2, 3)
 var DAMAGE = randf_range(0.25, 0.65)
@@ -29,4 +30,5 @@ func _physics_process(delta):
 func damage():
 	health -= 1
 	if health <= 0:
+		target.get_points(SCORE)
 		queue_free()

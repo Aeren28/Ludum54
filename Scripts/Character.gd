@@ -19,6 +19,7 @@ var rotation_speed = 10.0  # Adjust the rotation speed as needed
 var current_rotation = 0.0  # Stores the current rotation in degrees
 var use_mouse_and_keyboard = true
 var health = MAX_HEALTH
+var score = 0;
 
 func _input(event):
 	if(event is InputEventKey):
@@ -147,3 +148,6 @@ func damage(damage):
 	print(health)
 	if (health <= 0):
 		queue_free()
+
+func get_points(append_score):
+	score += append_score
