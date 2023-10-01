@@ -134,7 +134,7 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Animation" id="Animation_0psh8"]
 resource_name = "Credits"
-length = 5.0
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -142,10 +142,10 @@ tracks/0/path = NodePath("MarginContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0, 15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0)]
+"values": [Vector2(0, 1080), Vector2(0, -1623)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m6453"]
@@ -166,12 +166,13 @@ script = ExtResource("1_s3mbv")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
+color = Color(0.156863, 0.121569, 0.133333, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
+offset_top = -1623.0
 offset_right = 1920.0
-offset_bottom = 1799.0
+offset_bottom = 1129.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
@@ -269,6 +270,11 @@ AUDIO:
 Hugo Cifuentes"
 horizontal_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_hkmf5")
+expand_mode = 5
+
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -285,10 +291,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xg4cf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rs15e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fi0e2")
 text = "Back"
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("3_hkmf5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
