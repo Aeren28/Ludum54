@@ -15,3 +15,7 @@ mesh = SubResource("CapsuleMesh_6f6et")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_teu4i")
+
+[node name="Attack Cooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
