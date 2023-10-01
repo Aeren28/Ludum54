@@ -4,7 +4,7 @@ class_name Spawner
 
 var numberEnemys = 1
 var enemy_count
-const TIME = 30
+var time = 5
 var timer
 var sec
 
@@ -27,7 +27,7 @@ func _process(delta):
 			enemy_count += 1
 			
 		numberEnemys *= 1.2
-		print(numberEnemys)
-		timer = TIME
+		time = numberEnemys * 1.5
+		timer = time
 	else:
 		timer -= delta
