@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://m4p6n1umtm7k"]
+[gd_scene load_steps=17 format=3 uid="uid://m4p6n1umtm7k"]
 
 [ext_resource type="ArrayMesh" uid="uid://6d7tvx3rpctm" path="res://witch.obj" id="1_jpp1q"]
-[ext_resource type="Texture2D" uid="uid://bihv1r6i54jv0" path="res://Assets/Textures/botella 4/DefaultMaterial_Base_color.png" id="2_efsxv"]
+[ext_resource type="Material" uid="uid://ddswmy1tgmd11" path="res://Scenes/Witch.tres" id="2_j40im"]
 [ext_resource type="PackedScene" uid="uid://0eqn58n82eur" path="res://Assets/Models/Characters/caballero.glb" id="3_0mahw"]
 [ext_resource type="ArrayMesh" uid="uid://1juqlpx3x2sl" path="res://Knight.obj" id="4_p0m7k"]
 [ext_resource type="Material" uid="uid://c7qfcwvlojfk2" path="res://Scenes/Knight.tres" id="5_iv5g3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c77lcw3fs84k3" path="res://Scenes/Other/Bonfire.tscn" id="10_1ksj7"]
 [ext_resource type="PackedScene" uid="uid://cekfwnhaaghlb" path="res://Scenes/Other/Caldero.tscn" id="11_ku4ci"]
 [ext_resource type="ArrayMesh" uid="uid://cfrssvu261w7c" path="res://Assets/Models/Fruits New/Apple.obj" id="12_dqsrg"]
+[ext_resource type="PackedScene" uid="uid://cjjqlic55jnwr" path="res://Assets/Models/Characters/bruja.glb" id="12_x67l3"]
 [ext_resource type="ArrayMesh" uid="uid://dj1hgh7t8xeqf" path="res://Assets/Models/Fruits New/cherry.obj" id="17_ofi4a"]
 [ext_resource type="ArrayMesh" uid="uid://dgtyjfmfdyqd0" path="res://Assets/Models/Fruits New/Banana.obj" id="21_cqfpp"]
 
@@ -21,11 +22,6 @@ normal_enabled = true
 
 [sub_resource type="Skin" id="Skin_dpgs0"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7otf"]
-albedo_texture = ExtResource("2_efsxv")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yja46"]
-
 [node name="Test" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -37,8 +33,38 @@ surface_material_override/0 = SubResource("StandardMaterial3D_uvjqr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37367, 0, -0.624929)
 mesh = ExtResource("1_jpp1q")
 skin = SubResource("Skin_dpgs0")
-surface_material_override/0 = SubResource("StandardMaterial3D_w7otf")
-surface_material_override/1 = SubResource("StandardMaterial3D_yja46")
+surface_material_override/0 = ExtResource("2_j40im")
+surface_material_override/1 = ExtResource("2_j40im")
+surface_material_override/2 = ExtResource("2_j40im")
+surface_material_override/3 = ExtResource("2_j40im")
+surface_material_override/4 = ExtResource("2_j40im")
+surface_material_override/5 = ExtResource("2_j40im")
+surface_material_override/6 = ExtResource("2_j40im")
+surface_material_override/7 = ExtResource("2_j40im")
+surface_material_override/8 = ExtResource("2_j40im")
+surface_material_override/9 = ExtResource("2_j40im")
+surface_material_override/10 = ExtResource("2_j40im")
+surface_material_override/11 = ExtResource("2_j40im")
+surface_material_override/12 = ExtResource("2_j40im")
+surface_material_override/13 = ExtResource("2_j40im")
+surface_material_override/14 = ExtResource("2_j40im")
+surface_material_override/15 = ExtResource("2_j40im")
+surface_material_override/16 = ExtResource("2_j40im")
+surface_material_override/17 = ExtResource("2_j40im")
+surface_material_override/18 = ExtResource("2_j40im")
+surface_material_override/19 = ExtResource("2_j40im")
+surface_material_override/20 = ExtResource("2_j40im")
+surface_material_override/21 = ExtResource("2_j40im")
+surface_material_override/22 = ExtResource("2_j40im")
+surface_material_override/23 = ExtResource("2_j40im")
+surface_material_override/24 = ExtResource("2_j40im")
+surface_material_override/25 = ExtResource("2_j40im")
+surface_material_override/26 = ExtResource("2_j40im")
+surface_material_override/27 = ExtResource("2_j40im")
+surface_material_override/28 = ExtResource("2_j40im")
+surface_material_override/29 = ExtResource("2_j40im")
+surface_material_override/30 = ExtResource("2_j40im")
+surface_material_override/31 = ExtResource("2_j40im")
 
 [node name="caballero" parent="." instance=ExtResource("3_0mahw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0412, 21.3328, -23.5573)
@@ -68,3 +94,6 @@ mesh = ExtResource("21_cqfpp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133648, -0.293388, 3.83749)
 
 [node name="Caldero" parent="." instance=ExtResource("11_ku4ci")]
+
+[node name="bruja" parent="." instance=ExtResource("12_x67l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2479, 53.685, 33.003)
