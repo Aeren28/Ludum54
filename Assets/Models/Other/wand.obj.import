@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c123ceimn2uol"
+path="res://.godot/imported/wand.obj-e9320813ddddeef9a9b6dd3f70a8d529.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wand.obj-e9320813ddddeef9a9b6dd3f70a8d529.mesh"]
+
+source_file="res://Assets/Models/Other/wand.obj"
+dest_files=["res://.godot/imported/wand.obj-e9320813ddddeef9a9b6dd3f70a8d529.mesh", "res://.godot/imported/wand.obj-e9320813ddddeef9a9b6dd3f70a8d529.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
