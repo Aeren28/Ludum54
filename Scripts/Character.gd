@@ -154,3 +154,8 @@ func damage(damage):
 func get_points(append_score):
 	score += append_score
 	gameplayUI_script.setScore(score)
+
+func cure(cure):
+	if (health < MAX_HEALTH):
+		health += 1
+		gameplayUI_script.setHealthbar(health / MAX_HEALTH)

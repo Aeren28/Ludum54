@@ -32,6 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624783, 4.16716, 0.246352)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_l5lvp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]

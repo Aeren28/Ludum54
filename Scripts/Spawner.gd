@@ -4,7 +4,7 @@ class_name Spawner
 
 var numberEnemys = 1
 var enemy_count
-var time = 5
+var time = 10
 var timer
 var sec
 
