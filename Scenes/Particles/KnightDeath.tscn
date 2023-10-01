@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://by1phb45s32kk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dacvk"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_jeqf5"]
+material = SubResource("StandardMaterial3D_dacvk")
+radius = 0.1
+height = 0.5
+
+[node name="KnightDeath" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177226, -0.00667477, -0.0109329)
+amount = 20
+speed_scale = 3.0
+mesh = SubResource("SphereMesh_jeqf5")
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 1.0
+radial_accel_max = 5.0
