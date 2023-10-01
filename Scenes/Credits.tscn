@@ -165,13 +165,12 @@ script = ExtResource("1_s3mbv")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.133333, 0.133333, 0.133333, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_top = 1084.0
 offset_right = 1920.0
-offset_bottom = 2883.0
+offset_bottom = 1799.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
