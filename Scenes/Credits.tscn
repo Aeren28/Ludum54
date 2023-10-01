@@ -1,16 +1,113 @@
-[gd_scene load_steps=9 format=3 uid="uid://cow3k5ems2h2r"]
+[gd_scene load_steps=12 format=3 uid="uid://cow3k5ems2h2r"]
 
 [ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_s3mbv"]
-[ext_resource type="FontFile" uid="uid://crbddopxmkvwc" path="res://Doctor Glitch.otf" id="1_x2ju3"]
+[ext_resource type="FontFile" uid="uid://cls1ja4qb8670" path="res://Assets/Fonts/papyrus.ttf" id="2_omqi3"]
+
+[sub_resource type="FontFile" id="FontFile_bhwus"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/115/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/115/0/ascent = 0.0
+cache/0/115/0/descent = 0.0
+cache/0/115/0/underline_position = 0.0
+cache/0/115/0/underline_thickness = 0.0
+cache/0/115/0/scale = 1.0
+cache/0/115/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/115/0/kerning_overrides/115/0 = Vector2(0, 0)
+cache/0/115/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/150/0/ascent = 0.0
+cache/0/150/0/descent = 0.0
+cache/0/150/0/underline_position = 0.0
+cache/0/150/0/underline_thickness = 0.0
+cache/0/150/0/scale = 1.0
+cache/0/150/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/115/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/150/0 = Vector2(0, 0)
 
 [sub_resource type="FontVariation" id="FontVariation_6dugp"]
-base_font = ExtResource("1_x2ju3")
+base_font = SubResource("FontFile_bhwus")
+fallbacks = Array[Font]([ExtResource("2_omqi3")])
+
+[sub_resource type="FontFile" id="FontFile_w3n02"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/40/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/40/0/glyphs/0/size = Vector2(0, 0)
+cache/0/40/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/40/0/glyphs/0/texture_idx = -1
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/100/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/100/0/glyphs/0/size = Vector2(0, 0)
+cache/0/100/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/100/0/glyphs/0/texture_idx = -1
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/50/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/50/0/glyphs/0/size = Vector2(0, 0)
+cache/0/50/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/50/0/glyphs/0/texture_idx = -1
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/75/0 = Vector2(0, 0)
+cache/0/75/0/ascent = 0.0
+cache/0/75/0/descent = 0.0
+cache/0/75/0/underline_position = 0.0
+cache/0/75/0/underline_thickness = 0.0
+cache/0/75/0/scale = 1.0
+cache/0/75/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/75/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/75/0/glyphs/0/size = Vector2(0, 0)
+cache/0/75/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/75/0/glyphs/0/texture_idx = -1
+cache/0/75/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/75/0/kerning_overrides/75/0 = Vector2(0, 0)
 
 [sub_resource type="FontVariation" id="FontVariation_b58s0"]
-base_font = ExtResource("1_x2ju3")
-
-[sub_resource type="FontVariation" id="FontVariation_6ooa8"]
-base_font = ExtResource("1_x2ju3")
+base_font = SubResource("FontFile_w3n02")
+fallbacks = Array[Font]([ExtResource("2_omqi3")])
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xg4cf"]
 bg_color = Color(0, 0, 0, 0.529412)
@@ -33,6 +130,14 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="Animation" id="Animation_0psh8"]
+resource_name = "Credits"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m6453"]
+_data = {
+"Credits": SubResource("Animation_0psh8")
+}
+
 [node name="Credits" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -43,15 +148,13 @@ grow_vertical = 2
 script = ExtResource("1_s3mbv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.133333, 0.133333, 0.133333, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1799.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
@@ -63,7 +166,7 @@ layout_mode = 2
 [node name="Credits Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_6dugp")
-theme_override_font_sizes/font_size = 115
+theme_override_font_sizes/font_size = 150
 text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -84,19 +187,69 @@ theme_override_constants/separation = 60
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = SubResource("FontVariation_b58s0")
-theme_override_font_sizes/font_size = 40
-text = "Programmer:
+theme_override_font_sizes/font_size = 50
+text = "PROGRAMMERS:
+
+
+Alejandro López
+
+
+Daniel Pérez
+
+
 Tom Renkema
-Sasdasdasdasd
-Aasdasdasdaasd
 
-Artists:
-sdasda
-Adadadas
-Aasdasdads
 
-Audio:
-Adadasasd"
+
+
+
+
+
+
+
+
+
+
+ARTISTS:
+
+
+Mariona Álvarez
+
+
+Nerea Fernández
+
+
+Mao Sheikh
+
+
+
+
+
+
+
+
+
+
+
+FX: 
+
+
+Dennys Hernández
+
+
+
+
+
+
+
+
+
+
+
+AUDIO:
+
+
+Hugo Cifuentes"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
@@ -109,11 +262,16 @@ theme_override_constants/margin_right = 550
 [node name="Back Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = SubResource("FontVariation_6ooa8")
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("2_omqi3")
+theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxFlat_xg4cf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rs15e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fi0e2")
 text = "Back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m6453")
+}
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/Back Button" to="." method="_on_back_button_pressed"]
