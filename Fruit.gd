@@ -11,5 +11,5 @@ func _ready():
 func _process(delta):
 	if target != null:
 		if position.distance_to(target.position) < 1.5:
-			target.cure(randf_range(0, 1))
+			target.cure(1)
 			queue_free()
