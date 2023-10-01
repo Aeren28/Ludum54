@@ -2,14 +2,21 @@ extends CharacterBody3D
 
 class_name Enemy
 
-var SPEED = randf_range(1, 4)
 const MAX_HEALTH = 2
+
+var SPEED = randf_range(2, 3)
+var DAMAGE = randf_range(0.25, 0.65)
 var health = MAX_HEALTH
 
 @onready var target = null
 
 func _ready():
 	target = get_tree().get_root().get_node("Escenario").get_node("Character")
+
+func _process(delta):
+	if target != null:
+		if position.distance_to(target.position) < 1.5:
+			target.damage(DAMAGE)
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -21,6 +28,5 @@ func _physics_process(delta):
 
 func damage():
 	health -= 1
-	print("[!] Health: ", health)
 	if health <= 0:
 		queue_free()

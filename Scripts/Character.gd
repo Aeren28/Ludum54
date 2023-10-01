@@ -4,6 +4,7 @@ class_name Character
 
 const SPEED = 5.0
 const ANGULAR_SPEED = 0.02
+const MAX_HEALTH = 100
 
 var projectile_preload = preload("res://Scenes/Projectile.tscn")
 
@@ -16,7 +17,8 @@ var direction
 var _mouse_motion = Vector2()
 var rotation_speed = 10.0  # Adjust the rotation speed as needed
 var current_rotation = 0.0  # Stores the current rotation in degrees
-var use_mouse_and_keyboard = true;
+var use_mouse_and_keyboard = true
+var health = MAX_HEALTH
 
 func _input(event):
 	if(event is InputEventKey):
@@ -139,3 +141,9 @@ func get_projected_2d_basis():
 	var proj_y = cam_basis.y
 	proj_y.y = 0
 	return [proj_x.normalized(), proj_y.normalized()]
+
+func damage(damage):
+	health -= damage
+	print(health)
+	if (health <= 0):
+		queue_free()

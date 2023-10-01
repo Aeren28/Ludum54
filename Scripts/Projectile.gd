@@ -24,7 +24,6 @@ func _process(delta):
 func _physics_process(delta):
 	var collision = get_last_slide_collision()
 	if collision:
-		print(collision.get_collider(0).name)
 		if (collision.get_collider(0).name == "Enemy" or collision.get_collider(0).name.begins_with("@CharacterBody3D")):
 			collision.get_collider(0).call("damage")
 			queue_free()

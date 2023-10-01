@@ -18,4 +18,4 @@ mesh = SubResource("CapsuleMesh_i2upd")
 shape = SubResource("CapsuleShape3D_xhwf5")
 
 [node name="Weapon" parent="." instance=ExtResource("2_1nvvq")]
-transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0, 0, 0.682124)
+transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0, 0, 0.622068)
