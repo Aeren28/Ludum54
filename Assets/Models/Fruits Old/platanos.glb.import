@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b65w8xevvlwmy"
-path="res://.godot/imported/sandia.glb-c7c38fbb438185671d959645d97ab573.scn"
+uid="uid://coguyq8cn4x7v"
+path="res://.godot/imported/platanos.glb-9bc0f4c33370a5ab7fd5987de7366dd3.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fruits/sandia.glb"
-dest_files=["res://.godot/imported/sandia.glb-c7c38fbb438185671d959645d97ab573.scn"]
+source_file="res://Assets/Models/Fruits Old/platanos.glb"
+dest_files=["res://.godot/imported/platanos.glb-9bc0f4c33370a5ab7fd5987de7366dd3.scn"]
 
 [params]
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://buw46vcrlpdkr"]
+
+[ext_resource type="ArrayMesh" uid="uid://dvtqtqcluiktp" path="res://Assets/Models/Fruits New/WaterMelon.obj" id="1_qb1mk"]
+[ext_resource type="Material" uid="uid://dwvg72bvhyo0m" path="res://Scenes/Fruits/Watermelon.tres" id="2_1gvk8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_34ik1"]
+radius = 2.30575
+height = 5.50548
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="WaterMelon" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, 0)
+mesh = ExtResource("1_qb1mk")
+surface_material_override/0 = ExtResource("2_1gvk8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587175, 1.89495, -1.02364)
+shape = SubResource("CapsuleShape3D_34ik1")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://52ec1xtbk4wp"]
+
+[ext_resource type="Texture2D" uid="uid://bkg00ky1r6281" path="res://Assets/Textures/manzana/DefaultMaterial_Base_color.png" id="1_3k2nx"]
+[ext_resource type="Texture2D" uid="uid://y6o1g6vnuioa" path="res://Assets/Textures/manzana/DefaultMaterial_Normal_OpenGL.png" id="2_mxtw6"]
+
+[resource]
+albedo_texture = ExtResource("1_3k2nx")
+normal_enabled = true
+normal_texture = ExtResource("2_mxtw6")

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coguyq8cn4x7v"
-path="res://.godot/imported/platanos.glb-602d1c8807fb54bfc6a7d8cf3198c8e9.scn"
+uid="uid://bk3usfqoqgukm"
+path="res://.godot/imported/cereza.glb-0961cef4b4787f41d3a0ea2dc63de7ba.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fruits/platanos.glb"
-dest_files=["res://.godot/imported/platanos.glb-602d1c8807fb54bfc6a7d8cf3198c8e9.scn"]
+source_file="res://Assets/Models/Fruits Old/cereza.glb"
+dest_files=["res://.godot/imported/cereza.glb-0961cef4b4787f41d3a0ea2dc63de7ba.scn"]
 
 [params]
 

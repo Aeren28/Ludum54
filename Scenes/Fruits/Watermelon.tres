@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dwvg72bvhyo0m"]
+
+[ext_resource type="Texture2D" uid="uid://bfggccoqktg8w" path="res://Assets/Textures/sandía/DefaultMaterial_Base_color.png" id="1_qgv23"]
+[ext_resource type="Texture2D" uid="uid://c88o1q78oxni8" path="res://Assets/Textures/sandía/DefaultMaterial_Normal_OpenGL.png" id="2_2o1c6"]
+
+[resource]
+albedo_texture = ExtResource("1_qgv23")
+normal_enabled = true
+normal_texture = ExtResource("2_2o1c6")

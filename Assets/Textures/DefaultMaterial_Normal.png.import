@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfn3ybdty5gc7"
-path="res://.godot/imported/DefaultMaterial_Normal.png-0b39463e34a59c19dec8750062b0a916.ctex"
+uid="uid://ck2e7jp7egc3s"
+path="res://.godot/imported/DefaultMaterial_Normal.png-eb3087608f1b1ed4c26a089a024c59f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Bruja 1/DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/DefaultMaterial_Normal.png-0b39463e34a59c19dec8750062b0a916.ctex"]
+source_file="res://Assets/Textures/DefaultMaterial_Normal.png"
+dest_files=["res://.godot/imported/DefaultMaterial_Normal.png-eb3087608f1b1ed4c26a089a024c59f8.ctex"]
 
 [params]
 

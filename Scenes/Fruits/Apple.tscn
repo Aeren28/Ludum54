@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ka3y7r4qs0mw"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfrssvu261w7c" path="res://Assets/Models/Fruits New/Apple.obj" id="1_f4mdp"]
+[ext_resource type="Material" uid="uid://52ec1xtbk4wp" path="res://Scenes/Fruits/Apple.tres" id="2_8vjql"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j8cgn"]
+radius = 1.71691
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="Apple" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+mesh = ExtResource("1_f4mdp")
+surface_material_override/0 = ExtResource("2_8vjql")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0278842, -0.15878, 0)
+shape = SubResource("SphereShape3D_j8cgn")

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bk3usfqoqgukm"
-path="res://.godot/imported/cereza.glb-f3f23f0db93c7970ec7b6792ae9701fe.scn"
+uid="uid://b65w8xevvlwmy"
+path="res://.godot/imported/sandia.glb-1ab6a0d8aa8d3fc65d6cec4f0bab76fd.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fruits/cereza.glb"
-dest_files=["res://.godot/imported/cereza.glb-f3f23f0db93c7970ec7b6792ae9701fe.scn"]
+source_file="res://Assets/Models/Fruits Old/sandia.glb"
+dest_files=["res://.godot/imported/sandia.glb-1ab6a0d8aa8d3fc65d6cec4f0bab76fd.scn"]
 
 [params]
 

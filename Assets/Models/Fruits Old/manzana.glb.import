@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2amdyb5m0dcl"
-path="res://.godot/imported/manzana.glb-eb0b01950801b9fd0b0f883e4c6238fc.scn"
+path="res://.godot/imported/manzana.glb-1f50cd9c2d3ecaf20946110e9a3c558b.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fruits/manzana.glb"
-dest_files=["res://.godot/imported/manzana.glb-eb0b01950801b9fd0b0f883e4c6238fc.scn"]
+source_file="res://Assets/Models/Fruits Old/manzana.glb"
+dest_files=["res://.godot/imported/manzana.glb-1f50cd9c2d3ecaf20946110e9a3c558b.scn"]
 
 [params]
 
