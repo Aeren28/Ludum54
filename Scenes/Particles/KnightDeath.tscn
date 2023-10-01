@@ -16,7 +16,9 @@ height = 0.5
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177226, -0.00667477, -0.0109329)
+emitting = false
 amount = 20
+one_shot = true
 speed_scale = 3.0
 mesh = SubResource("SphereMesh_jeqf5")
 emission_shape = 2

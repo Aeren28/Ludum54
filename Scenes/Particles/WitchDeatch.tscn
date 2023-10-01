@@ -14,7 +14,9 @@ height = 0.5
 [node name="WitchParticles" type="Node3D"]
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+emitting = false
 amount = 20
+one_shot = true
 speed_scale = 3.0
 mesh = SubResource("SphereMesh_jd6il")
 emission_shape = 2

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwllbobl7eqrq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t518x"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.835294, 0.698039, 0, 1)
+emission_enabled = true
+emission = Color(0.913725, 0.419608, 0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_4usdv"]
+material = SubResource("StandardMaterial3D_t518x")
+radius = 0.1
+height = 0.5
+
+[node name="Candle" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+amount = 10
+mesh = SubResource("SphereMesh_4usdv")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 0.5
+emission_ring_inner_radius = 0.0
+gravity = Vector3(0, 2.5, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.3
