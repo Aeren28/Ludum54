@@ -21,5 +21,6 @@ func _physics_process(delta):
 
 func damage():
 	health -= 1
-	if health < 0:
+	print("[!] Health: ", health)
+	if health <= 0:
 		queue_free()
