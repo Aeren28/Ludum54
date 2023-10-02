@@ -1,14 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1d4clewfu60u"]
+[gd_scene load_steps=9 format=3 uid="uid://c1d4clewfu60u"]
 
 [ext_resource type="Script" path="res://Scripts/Projectile.gd" id="1_beulm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqqaq"]
-albedo_color = Color(0.737255, 0.321569, 0.298039, 1)
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_hn2gy"]
 material = SubResource("StandardMaterial3D_uqqaq")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k0ysn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf425"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.698039, 1, 0.996078, 1)
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ofsek"]
+material = SubResource("StandardMaterial3D_pf425")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3ghm"]
+transparency = 1
+blend_mode = 1
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_b8sit"]
+material = SubResource("StandardMaterial3D_j3ghm")
+radius = 0.25
+height = 0.5
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -22,3 +47,21 @@ mesh = SubResource("SphereMesh_hn2gy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_k0ysn")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+amount = 50
+mesh = SubResource("SphereMesh_ofsek")
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.5
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="CPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+amount = 15
+speed_scale = 0.8
+mesh = SubResource("SphereMesh_b8sit")
+gravity = Vector3(10, 0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.5
