@@ -30,6 +30,6 @@ layers = 3
 mesh = ExtResource("2_0rdrf")
 
 [node name="Weapon" parent="." instance=ExtResource("2_1nvvq")]
-transform = Transform3D(0.213672, 0, 0, 0, 1.06472, 0, 0, 0, 0.203786, 0.00120521, -0.0050348, 0.621483)
+transform = Transform3D(1, 0, 0, 0, 0.913765, -0.406242, 0, 0.406242, 0.913765, -0.521963, -0.0050348, -0.156923)
 
 [node name="GameplayUI" parent="." instance=ExtResource("3_bfkn5")]
